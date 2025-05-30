@@ -27,15 +27,15 @@ void setup() {
 void loop() {
   lcd.init();lcd.backlight();lcd.setCursor(0, 0); //Initialize LCD and turn on the backlight
   lcd2.init();lcd2.backlight();lcd2.setCursor(0, 0); //Initialize LCD and turn on the backlight
-  PrintLCD("Feeding:","left card");Move1(LeftFeed,LeftFeedStep,0,100,speed);delay(1000);
-  PrintLCD("Left choice:","left");Move1(LeftChoice,LeftChoiceStep,0,100,speed);delay(1000);
-  PrintLCD("Feeding:","left card");Move1(LeftFeed,LeftFeedStep,0,100,speed);delay(1000);
-  PrintLCD("Left choice:","right");Move1(LeftChoice,LeftChoiceStep,1,100,speed);delay(1000);
+  PrintLCD("Feeding:","left card");Move1(LeftFeedDir,LeftFeedStep,0,100,speed);delay(1000);
+  PrintLCD("Left choice:","left");Move1(LeftChoiceDir,LeftChoiceStep,0,100,speed);delay(1000);
+  PrintLCD("Feeding:","left card");Move1(LeftFeedDir,LeftFeedStep,0,100,speed);delay(1000);
+  PrintLCD("Left choice:","right");Move1(LeftChoiceDir,LeftChoiceStep,1,100,speed);delay(1000);
 
-  PrintLCD("Feeding:","right card");Move1(RightFeed,RightFeedStep,0,100,speed);delay(1000);
-  PrintLCD("Right choice:","left");Move1(RightChoice,RightChoiceStep,0,100,speed);delay(1000);
-  PrintLCD("Feeding:","Right card");Move1(RightFeed,RightFeedStep,0,100,speed);delay(1000);
-  PrintLCD("Right choice:","right");Move1(RightChoice,RightChoiceStep,1,100,speed);delay(1000);
+  PrintLCD2("Feeding:","right card");Move1(RightFeedDir,RightFeedStep,0,100,speed);delay(1000);
+  PrintLCD2("Right choice:","left");Move1(RightChoiceDir,RightChoiceStep,0,100,speed);delay(1000);
+  PrintLCD2("Feeding:","Right card");Move1(RightFeedDir,RightFeedStep,0,100,speed);delay(1000);
+  PrintLCD2("Right choice:","right");Move1(RightChoiceDir,RightChoiceStep,1,100,speed);delay(1000);
 }
 
 //Function to move along the Z-axis with a specified direction and steps
